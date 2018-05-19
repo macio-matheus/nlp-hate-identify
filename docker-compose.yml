@@ -1,39 +1,16 @@
 version: '3'
 
 services:
-  mongo:
-    container_name: nlp_mongo
-    image: mongo:3.0.15
-    hostname: mongo
-    ports:
-      - "27017:27017"
-    command: mongod --smallfiles
-
   api:
-    container_name: nlp_api
+    container_name: nlp_hate_identify_api
     build:
-      context: ./api
+      context: ./
       dockerfile: Dockerfile
+    #command: tail -f /dev/null
     command: bash -c "python -m nltk.downloader punkt && python app.py"
     working_dir: /app
     ports:
       - "6543:6543"
     volumes:
-      - ./api:/app
-    depends_on:
-      - mongo
+      - ./:/app
 
-  front:
-    container_name: nlp_front
-    build:
-      context: ./front
-      dockerfile: Dockerfile
-    working_dir: /app
-    command: bash -c " echo \"Start copying node modules\" && rsync -a -v --ignore-existing /app_temp/node_modules /app && node server.js"
-    ports:
-      - "5000:5000"
-    volumes:
-      - ./front:/app
-    depends_on:
-      - api
-      - mongo

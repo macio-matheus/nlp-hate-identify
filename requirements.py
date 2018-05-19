@@ -1,0 +1,9 @@
+conda==4.3.16
+nltk==3.2.5
+numpy==1.12.1
+pandas==0.19.2
+Pillow==5.0.0
+scikit-learn==0.18.2
+scipy==1.0.0
+googletrans==2.2.0
+flask
