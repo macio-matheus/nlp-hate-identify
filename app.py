@@ -6,8 +6,8 @@ from core.core import start_pipeline
 
 app = Flask(__name__)
 
-cls = joblib.load('/data/model_mlp_cls.pkl')
-tfidf = joblib.load('/data/tfidf_vectorizer.pkl')
+cls = joblib.load('./data/model_mlp_cls.pkl')
+tfidf = joblib.load('./data/tfidf_vectorizer.pkl')
 
 
 @app.route('/hello', methods=['GET'])
