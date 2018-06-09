@@ -6,8 +6,8 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    #command: python app.py
-    command: tail -f /dev/null
+    #command: tail -f /dev/null
+    command: bash -c "python -m nltk.downloader punkt && python app.py"
     working_dir: /app
     ports:
       - "6543:6543"

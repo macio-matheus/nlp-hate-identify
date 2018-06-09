@@ -5,8 +5,6 @@ WORKDIR /app
 
 # INSTALL DEPENDENCIES
 COPY requirements.py /app
-RUN pip install --upgrade pip
-RUN pip install --upgrade setuptools
 RUN pip install -r requirements.py
 
 EXPOSE 6543
