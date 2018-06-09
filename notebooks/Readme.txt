@@ -1,0 +1,1 @@
+Imagem docker utilizada para o Jupyter Notebook: https://hub.docker.com/r/jupyter/datascience-notebook/
