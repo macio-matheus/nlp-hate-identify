@@ -1,6 +1,6 @@
 # nlp-hate-identify
 
-NLP Ultimate Discipline Project.
+Simple api for identifying toxic comments. The objective is to show a model built with machine learning techniques such as natural language processing and neural networks, which is able to identify hate comments in multiple languages.
 
 ### Tech
 
@@ -10,16 +10,18 @@ Dillinger uses a number of open source projects to work properly:
 * [Flask Framework] - python microframework
 
 ### Docker
-Dillinger is very easy to install and deploy in a Docker container.
+Build and run application using Docker.
 
 In order to execute the application, it is necessary to perform the build of the docker compose, done that, the application can already be executed with the compose up.
+
+Build application
 
 ```sh
 cd nlp-hate-identify
 docker-compose build
 ```
 
-Run application in production environment
+Run application
 
 ```sh
 cd nlp-hate-identify
