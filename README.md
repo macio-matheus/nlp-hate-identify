@@ -4,10 +4,11 @@ Simple api for identifying toxic comments. The objective is to show a model buil
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
+Technology:
 
 * [Python] - for the backend
 * [Flask Framework] - python microframework
+* [SKLearn] - Machine learning library
 
 ### Docker
 Build and run application using Docker.
